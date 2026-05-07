@@ -200,10 +200,10 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
   width: 100%;
 }
 .nav-logo {
-  font-size: 1.2rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: var(--c-ink);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
 }
 .nav-logo span { color: var(--c-accent); }
 .nav-links {
