@@ -43,6 +43,96 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
+
+  <!-- Background graphic: layered neural network -->
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <!--
+      Layers (left → right) — nodes spread to viewBox edges:
+        L1 input  x=28   5 nodes  y=[28,148,260,372,490]
+        L2 hidden x=248  7 nodes  y=[14,94,174,254,334,414,494]
+        L3 hidden x=510  7 nodes  y=[14,94,174,254,334,414,494]
+        L4 hidden x=772  6 nodes  y=[28,124,214,306,396,490]
+        L5 output x=1172 4 nodes  y=[112,224,306,406]
+    -->
+    <svg class="hero-network" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- Connections L1→L2 -->
+      <g stroke="#2563eb" stroke-width="1" fill="none" opacity="0.45">
+        <line x1="28" y1="28" x2="248" y2="14"/><line x1="28" y1="28" x2="248" y2="94"/><line x1="28" y1="28" x2="248" y2="174"/><line x1="28" y1="28" x2="248" y2="254"/><line x1="28" y1="28" x2="248" y2="334"/><line x1="28" y1="28" x2="248" y2="414"/><line x1="28" y1="28" x2="248" y2="494"/>
+        <line x1="28" y1="148" x2="248" y2="14"/><line x1="28" y1="148" x2="248" y2="94"/><line x1="28" y1="148" x2="248" y2="174"/><line x1="28" y1="148" x2="248" y2="254"/><line x1="28" y1="148" x2="248" y2="334"/><line x1="28" y1="148" x2="248" y2="414"/><line x1="28" y1="148" x2="248" y2="494"/>
+        <line x1="28" y1="260" x2="248" y2="14"/><line x1="28" y1="260" x2="248" y2="94"/><line x1="28" y1="260" x2="248" y2="174"/><line x1="28" y1="260" x2="248" y2="254"/><line x1="28" y1="260" x2="248" y2="334"/><line x1="28" y1="260" x2="248" y2="414"/><line x1="28" y1="260" x2="248" y2="494"/>
+        <line x1="28" y1="372" x2="248" y2="14"/><line x1="28" y1="372" x2="248" y2="94"/><line x1="28" y1="372" x2="248" y2="174"/><line x1="28" y1="372" x2="248" y2="254"/><line x1="28" y1="372" x2="248" y2="334"/><line x1="28" y1="372" x2="248" y2="414"/><line x1="28" y1="372" x2="248" y2="494"/>
+        <line x1="28" y1="490" x2="248" y2="14"/><line x1="28" y1="490" x2="248" y2="94"/><line x1="28" y1="490" x2="248" y2="174"/><line x1="28" y1="490" x2="248" y2="254"/><line x1="28" y1="490" x2="248" y2="334"/><line x1="28" y1="490" x2="248" y2="414"/><line x1="28" y1="490" x2="248" y2="494"/>
+      </g>
+      <!-- Connections L2→L3 -->
+      <g stroke="#2563eb" stroke-width="1" fill="none" opacity="0.35">
+        <line x1="248" y1="14" x2="510" y2="14"/><line x1="248" y1="14" x2="510" y2="94"/><line x1="248" y1="14" x2="510" y2="174"/><line x1="248" y1="14" x2="510" y2="254"/><line x1="248" y1="14" x2="510" y2="334"/><line x1="248" y1="14" x2="510" y2="414"/><line x1="248" y1="14" x2="510" y2="494"/>
+        <line x1="248" y1="94" x2="510" y2="14"/><line x1="248" y1="94" x2="510" y2="94"/><line x1="248" y1="94" x2="510" y2="174"/><line x1="248" y1="94" x2="510" y2="254"/><line x1="248" y1="94" x2="510" y2="334"/><line x1="248" y1="94" x2="510" y2="414"/><line x1="248" y1="94" x2="510" y2="494"/>
+        <line x1="248" y1="174" x2="510" y2="14"/><line x1="248" y1="174" x2="510" y2="94"/><line x1="248" y1="174" x2="510" y2="174"/><line x1="248" y1="174" x2="510" y2="254"/><line x1="248" y1="174" x2="510" y2="334"/><line x1="248" y1="174" x2="510" y2="414"/><line x1="248" y1="174" x2="510" y2="494"/>
+        <line x1="248" y1="254" x2="510" y2="14"/><line x1="248" y1="254" x2="510" y2="94"/><line x1="248" y1="254" x2="510" y2="174"/><line x1="248" y1="254" x2="510" y2="254"/><line x1="248" y1="254" x2="510" y2="334"/><line x1="248" y1="254" x2="510" y2="414"/><line x1="248" y1="254" x2="510" y2="494"/>
+        <line x1="248" y1="334" x2="510" y2="14"/><line x1="248" y1="334" x2="510" y2="94"/><line x1="248" y1="334" x2="510" y2="174"/><line x1="248" y1="334" x2="510" y2="254"/><line x1="248" y1="334" x2="510" y2="334"/><line x1="248" y1="334" x2="510" y2="414"/><line x1="248" y1="334" x2="510" y2="494"/>
+        <line x1="248" y1="414" x2="510" y2="14"/><line x1="248" y1="414" x2="510" y2="94"/><line x1="248" y1="414" x2="510" y2="174"/><line x1="248" y1="414" x2="510" y2="254"/><line x1="248" y1="414" x2="510" y2="334"/><line x1="248" y1="414" x2="510" y2="414"/><line x1="248" y1="414" x2="510" y2="494"/>
+        <line x1="248" y1="494" x2="510" y2="14"/><line x1="248" y1="494" x2="510" y2="94"/><line x1="248" y1="494" x2="510" y2="174"/><line x1="248" y1="494" x2="510" y2="254"/><line x1="248" y1="494" x2="510" y2="334"/><line x1="248" y1="494" x2="510" y2="414"/><line x1="248" y1="494" x2="510" y2="494"/>
+      </g>
+      <!-- Connections L3→L4 -->
+      <g stroke="#2563eb" stroke-width="1" fill="none" opacity="0.35">
+        <line x1="510" y1="14" x2="772" y2="28"/><line x1="510" y1="14" x2="772" y2="124"/><line x1="510" y1="14" x2="772" y2="214"/><line x1="510" y1="14" x2="772" y2="306"/><line x1="510" y1="14" x2="772" y2="396"/><line x1="510" y1="14" x2="772" y2="490"/>
+        <line x1="510" y1="94" x2="772" y2="28"/><line x1="510" y1="94" x2="772" y2="124"/><line x1="510" y1="94" x2="772" y2="214"/><line x1="510" y1="94" x2="772" y2="306"/><line x1="510" y1="94" x2="772" y2="396"/><line x1="510" y1="94" x2="772" y2="490"/>
+        <line x1="510" y1="174" x2="772" y2="28"/><line x1="510" y1="174" x2="772" y2="124"/><line x1="510" y1="174" x2="772" y2="214"/><line x1="510" y1="174" x2="772" y2="306"/><line x1="510" y1="174" x2="772" y2="396"/><line x1="510" y1="174" x2="772" y2="490"/>
+        <line x1="510" y1="254" x2="772" y2="28"/><line x1="510" y1="254" x2="772" y2="124"/><line x1="510" y1="254" x2="772" y2="214"/><line x1="510" y1="254" x2="772" y2="306"/><line x1="510" y1="254" x2="772" y2="396"/><line x1="510" y1="254" x2="772" y2="490"/>
+        <line x1="510" y1="334" x2="772" y2="28"/><line x1="510" y1="334" x2="772" y2="124"/><line x1="510" y1="334" x2="772" y2="214"/><line x1="510" y1="334" x2="772" y2="306"/><line x1="510" y1="334" x2="772" y2="396"/><line x1="510" y1="334" x2="772" y2="490"/>
+        <line x1="510" y1="414" x2="772" y2="28"/><line x1="510" y1="414" x2="772" y2="124"/><line x1="510" y1="414" x2="772" y2="214"/><line x1="510" y1="414" x2="772" y2="306"/><line x1="510" y1="414" x2="772" y2="396"/><line x1="510" y1="414" x2="772" y2="490"/>
+        <line x1="510" y1="494" x2="772" y2="28"/><line x1="510" y1="494" x2="772" y2="124"/><line x1="510" y1="494" x2="772" y2="214"/><line x1="510" y1="494" x2="772" y2="306"/><line x1="510" y1="494" x2="772" y2="396"/><line x1="510" y1="494" x2="772" y2="490"/>
+      </g>
+      <!-- Connections L4→L5 -->
+      <g stroke="#2563eb" stroke-width="1" fill="none" opacity="0.45">
+        <line x1="772" y1="28" x2="1172" y2="112"/><line x1="772" y1="28" x2="1172" y2="224"/><line x1="772" y1="28" x2="1172" y2="306"/><line x1="772" y1="28" x2="1172" y2="406"/>
+        <line x1="772" y1="124" x2="1172" y2="112"/><line x1="772" y1="124" x2="1172" y2="224"/><line x1="772" y1="124" x2="1172" y2="306"/><line x1="772" y1="124" x2="1172" y2="406"/>
+        <line x1="772" y1="214" x2="1172" y2="112"/><line x1="772" y1="214" x2="1172" y2="224"/><line x1="772" y1="214" x2="1172" y2="306"/><line x1="772" y1="214" x2="1172" y2="406"/>
+        <line x1="772" y1="306" x2="1172" y2="112"/><line x1="772" y1="306" x2="1172" y2="224"/><line x1="772" y1="306" x2="1172" y2="306"/><line x1="772" y1="306" x2="1172" y2="406"/>
+        <line x1="772" y1="396" x2="1172" y2="112"/><line x1="772" y1="396" x2="1172" y2="224"/><line x1="772" y1="396" x2="1172" y2="306"/><line x1="772" y1="396" x2="1172" y2="406"/>
+        <line x1="772" y1="490" x2="1172" y2="112"/><line x1="772" y1="490" x2="1172" y2="224"/><line x1="772" y1="490" x2="1172" y2="306"/><line x1="772" y1="490" x2="1172" y2="406"/>
+      </g>
+      <!-- L1: input nodes -->
+      <g fill="#3b82f6">
+        <circle cx="28" cy="28" r="6"/><circle cx="28" cy="148" r="6"/><circle cx="28" cy="260" r="6"/><circle cx="28" cy="372" r="6"/><circle cx="28" cy="490" r="6"/>
+      </g>
+      <!-- L2: hidden nodes -->
+      <g fill="#2563eb">
+        <circle cx="248" cy="14" r="5"/><circle cx="248" cy="94" r="5"/><circle cx="248" cy="254" r="5"/><circle cx="248" cy="414" r="5"/><circle cx="248" cy="494" r="5"/>
+      </g>
+      <circle cx="248" cy="174" fill="#2563eb">
+        <animate attributeName="r" values="5;8;5" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="248" cy="334" fill="#2563eb">
+        <animate attributeName="r" values="5;8;5" dur="3.4s" begin="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.4s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <!-- L3: hidden nodes -->
+      <g fill="#2563eb">
+        <circle cx="510" cy="14" r="5"/><circle cx="510" cy="94" r="5"/><circle cx="510" cy="254" r="5"/><circle cx="510" cy="414" r="5"/><circle cx="510" cy="494" r="5"/>
+      </g>
+      <circle cx="510" cy="174" fill="#1d4ed8">
+        <animate attributeName="r" values="5;8;5" dur="3.1s" begin="0.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.1s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="510" cy="334" fill="#1d4ed8">
+        <animate attributeName="r" values="5;8;5" dur="2.6s" begin="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" begin="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <!-- L4: hidden nodes -->
+      <g fill="#2563eb">
+        <circle cx="772" cy="28" r="5"/><circle cx="772" cy="124" r="5"/><circle cx="772" cy="214" r="5"/><circle cx="772" cy="306" r="5"/><circle cx="772" cy="396" r="5"/><circle cx="772" cy="490" r="5"/>
+      </g>
+      <!-- L5: output nodes -->
+      <g fill="#3b82f6">
+        <circle cx="1172" cy="112" r="6"/><circle cx="1172" cy="224" r="6"/><circle cx="1172" cy="306" r="6"/><circle cx="1172" cy="406" r="6"/>
+      </g>
+    </svg>
+  </div>
+
   <div class="hero-inner container">
     <h1>Deep AI Expertise.<br>Deployed on <span class="serif">Your Terms.</span></h1>
     <p class="hero-sub" style="max-width:720px;">On-demand AI/ML practitioners, outcome-based project delivery, and Oracle and SAP consultants for enterprise technology teams across the US.</p>
@@ -261,27 +351,37 @@
     </div>
     <div class="industry-grid">
       <div class="industry-card">
-        <span class="industry-icon">⚡</span>
+        <div class="industry-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+        </div>
         <h4>Tech &amp; SaaS</h4>
         <p>AI product features, ML infrastructure, and specialist consultants for fast-moving product teams.</p>
       </div>
       <div class="industry-card">
-        <span class="industry-icon">🏦</span>
+        <div class="industry-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
         <h4>Financial Services</h4>
         <p>Risk and fraud AI, LLM-powered workflows, and Oracle/SAP ERP consulting needs.</p>
       </div>
       <div class="industry-card">
-        <span class="industry-icon">🏥</span>
+        <div class="industry-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
         <h4>Healthcare &amp; Life Sciences</h4>
         <p>Clinical AI, document intelligence, and compliance-aware data platforms.</p>
       </div>
       <div class="industry-card">
-        <span class="industry-icon">🛍️</span>
+        <div class="industry-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
         <h4>Retail &amp; E-commerce</h4>
         <p>Recommendation systems, demand forecasting, and AI personalization at scale.</p>
       </div>
       <div class="industry-card">
-        <span class="industry-icon">💼</span>
+        <div class="industry-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
         <h4>Professional Services</h4>
         <p>AI-augmented workflows, data platforms, and ERP consultants for consulting firms.</p>
       </div>

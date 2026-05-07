@@ -279,21 +279,63 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
 /* === HERO === */
 .hero {
   padding: 88px 0 72px;
-  background-color: var(--c-bg);
-  background-image: radial-gradient(circle, #dde4f0 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-color: #f0f4ff;
   position: relative;
   overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.60;
+}
+.hero-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #a5bcff 0%, #cdd9ff 55%, transparent 100%);
+  top: -140px;
+  right: -100px;
+}
+.hero-orb-2 {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, #adc5ff 0%, #c8d8ff 55%, transparent 100%);
+  bottom: -80px;
+  left: -80px;
+}
+.hero-network {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.38;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 86%, transparent 100%);
+}
+@keyframes node-pulse {
+  0%, 100% { r: 5; opacity: 0.7; }
+  50%       { r: 8; opacity: 1;   }
+}
+@keyframes node-pulse-sm {
+  0%, 100% { r: 3.5; opacity: 0.5; }
+  50%       { r: 5.5; opacity: 0.9; }
 }
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom,
-    rgba(255,255,255,0.05) 0%,
-    rgba(255,255,255,0.92) 80%,
-    rgba(255,255,255,1) 100%);
+    rgba(240,244,255,0.0) 0%,
+    rgba(240,244,255,0.65) 70%,
+    rgba(240,244,255,1) 100%);
   pointer-events: none;
+  z-index: 0;
 }
 .hero-inner {
   position: relative;
@@ -301,6 +343,7 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
   text-align: center;
   max-width: 780px;
   margin: 0 auto;
+  isolation: isolate;
 }
 .hero h1 { margin-bottom: 20px; }
 .hero-sub {
@@ -361,7 +404,7 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
 /* === PAGE HERO (inner pages) === */
 .page-hero {
   padding: 64px 0 56px;
-  background: var(--c-bg-alt);
+  background: #f0f4ff;
   border-bottom: 1px solid var(--c-border);
 }
 .page-hero h1 {
@@ -516,9 +559,15 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
 }
 .industry-card:hover { box-shadow: var(--s-md); transform: translateY(-2px); }
 .industry-icon {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  display: block;
+  width: 44px;
+  height: 44px;
+  background: var(--c-bg-blue);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--c-accent);
 }
 .industry-card h4 { font-size: 0.9rem; margin-bottom: 5px; }
 .industry-card p  { font-size: 0.78rem; color: var(--c-ink-3); line-height: 1.5; }
