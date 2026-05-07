@@ -200,7 +200,7 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
   width: 100%;
 }
 .nav-logo {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--c-ink);
   letter-spacing: -0.03em;
@@ -759,7 +759,7 @@ select {
   margin-bottom: 48px;
 }
 .footer-brand .logo {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: white;
   margin-bottom: 10px;
