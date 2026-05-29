@@ -93,7 +93,7 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
   color: var(--c-accent);
   margin-bottom: 12px;
 }
-.section-label-amber { color: var(--c-amber); }
+.section-label-amber { color: var(--c-accent); }
 
 /* === BADGE === */
 .badge {
@@ -115,10 +115,10 @@ p  { color: var(--c-ink-2); line-height: 1.7; }
   flex-shrink: 0;
 }
 .badge-amber {
-  color: var(--c-amber-dark);
-  background: var(--c-amber-bg);
+  color: var(--c-accent);
+  background: var(--c-accent-light);
 }
-.badge-amber .badge-dot { background: var(--c-amber); }
+.badge-amber .badge-dot { background: var(--c-accent); }
 
 /* === BUTTONS === */
 .btn {
