@@ -1,2 +1,9 @@
 # Claude Code internal files
 .claude/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
